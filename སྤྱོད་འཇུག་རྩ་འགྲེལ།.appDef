@@ -898,7 +898,7 @@
     <feature name="epub-toc-section-headings" value="true"/>
   </features>
 
-  <contents-filename>utgTQz0t0k</contents-filename>
+  <contents-filename>fzENEoG8zx</contents-filename>
 
   <layouts default="single">
     <layout mode="single" enabled="true">
@@ -5304,7 +5304,7 @@
   </images>
 
   <images type="drawer">
-    <image width="397" height="137">drawable-mdpi\nav_drawer.png</image>
+    <image width="387" height="169">drawable-mdpi\nav_drawer.png</image>
   </images>
 
   <adaptive-icon>
