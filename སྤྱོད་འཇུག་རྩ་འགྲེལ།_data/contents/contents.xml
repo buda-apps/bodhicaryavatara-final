@@ -25,7 +25,7 @@
     <contents-item id="2">
       <title lang="default">ཐོགས་མེད་བཟང་བོའི་འགྲེལ་བ།</title>
       <subtitle lang="default">ཐོགས་མེད་བཟང་བོའི་སྤྱོད་འཇུག</subtitle>
-      <image-filename>circle-no-background-202x238.png</image-filename>
+      <image-filename>Thokmezangpo-circle.png</image-filename>
       <link type="reference" target="B001" />
       <layout mode="single">
         <layout-collection id="C02"/>
@@ -35,7 +35,7 @@
     <contents-item id="3">
       <title lang="default">ཀུན་དཔལ་སྤྱོད་འཇུག</title>
       <subtitle lang="default">ཀུན་དཔལ་སྤྱོད་འཇུག</subtitle>
-      <image-filename>circle-no-background-202x238.png</image-filename>
+      <image-filename>Kunpal-circle.png</image-filename>
       <link type="reference" target="B001" />
       <layout mode="single">
         <layout-collection id="C03"/>
