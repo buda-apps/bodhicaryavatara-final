@@ -139,7 +139,7 @@
     <feature name="daily-reminder" value="false"/>
     <feature name="daily-reminder-default" value="false"/>
     <feature name="daily-reminder-time" value="07:30"/>
-    <feature name="text-on-image" value="false"/>
+    <feature name="text-on-image" value="true"/>
     <feature name="text-on-image-video" value="false"/>
     <feature name="text-on-image-watermark-width" value="20"/>
     <feature name="text-on-image-watermark-margin" value="1"/>
@@ -898,7 +898,7 @@
     <feature name="epub-toc-section-headings" value="true"/>
   </features>
 
-  <contents-filename>lkkWjl9b3P</contents-filename>
+  <contents-filename>in2xCAPDJJ</contents-filename>
 
   <layouts default="single">
     <layout mode="single" enabled="true">
