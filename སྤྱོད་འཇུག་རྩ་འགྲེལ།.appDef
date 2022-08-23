@@ -141,8 +141,8 @@
     <feature name="daily-reminder-time" value="07:30"/>
     <feature name="text-on-image" value="true"/>
     <feature name="text-on-image-video" value="true"/>
-    <feature name="text-on-image-watermark-width" value="14"/>
-    <feature name="text-on-image-watermark-margin" value="0"/>
+    <feature name="text-on-image-watermark-width" value="15"/>
+    <feature name="text-on-image-watermark-margin" value="1"/>
     <feature name="text-on-image-watermark-position" value="top-left"/>
     <feature name="layout-config-change-nav-drawer-menu" value="true"/>
     <feature name="layout-config-change-toolbar-button" value="true"/>
@@ -898,7 +898,7 @@
     <feature name="epub-toc-section-headings" value="true"/>
   </features>
 
-  <contents-filename>jvLDqHx3Zj</contents-filename>
+  <contents-filename>pyjbooFmnY</contents-filename>
 
   <layouts default="single">
     <layout mode="single" enabled="true">
@@ -5313,12 +5313,14 @@
     <image width="500" height="500">grassland-500x500.png</image>
     <image width="500" height="500">landscape -500x500.png</image>
     <image width="500" height="500">lightening-500x500.png</image>
-    <image width="200" height="170">watermark.png</image>
     <image width="1080" height="1080">earth-1617121_1920-pixabay-1080.jpg</image>
-  </images>
-
-  <images type="watermark">
-    <image width="200" height="170">watermark.png</image>
+    <image width="912" height="808">01.png</image>
+    <image width="385" height="234">02.png</image>
+    <image width="996" height="996">03.png</image>
+    <image width="712" height="712">04.png</image>
+    <image width="1000" height="1000">05.png</image>
+    <image width="644" height="644">06.png</image>
+    <image width="607" height="479">07.png</image>
   </images>
 
   <adaptive-icon>
