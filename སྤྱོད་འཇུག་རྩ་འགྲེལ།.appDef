@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<app-definition type="SAB" program-version="10.0.1">
+<app-definition type="SAB" program-version="11.0.3">
   <project-name>སྤྱོད་འཇུག་རྩ་འགྲེལ།</project-name>
   <project-description></project-description>
 
@@ -17,10 +17,14 @@
   <ipa-app-type>dedicated</ipa-app-type>
   <ipa-container-audio>false</ipa-container-audio>
 
+  <pwa-manifest name="" short-name="">
+    <pwa-text lang="null" direction="LTR"/>
+  </pwa-manifest>
+
   <signing>
-    <keystore>C:\Users\dhond\OneDrive\Documents\App Builder\keystore\keystore1.keystore</keystore>
+    <keystore>C:\Users\Dhondup\Documents\App Builder\keystore\keystore1.keystore</keystore>
     <keystore-password>Mtxj8m3Tu0wliXD4/gkQdg==</keystore-password>
-    <alias>key10</alias>
+    <alias>key1</alias>
     <alias-password>Mtxj8m3Tu0wliXD4/gkQdg==</alias-password>
   </signing>
 
@@ -33,12 +37,6 @@
 
   <analytics enabled="false">
   </analytics>
-
-  <audio-settings>
-    <message id="audio-not-found">
-      <filename>audio-not-found.txt</filename>
-    </message>
-  </audio-settings>
 
   <audio-sources>
   </audio-sources>
@@ -98,6 +96,10 @@
     <feature name="audio-download-mode" value="prompt"/>
     <feature name="audio-play-button-size" value="normal"/>
     <feature name="audio-play-button-style" value="arrow"/>
+    <feature name="audio-repeat-mode-button" value="true"/>
+    <feature name="audio-repeat-mode-hint" value="true"/>
+    <feature name="audio-repeat-selection-button" value="true"/>
+    <feature name="audio-repeat-selection-wait-time" value="2000"/>
     <feature name="text-select-play-audio" value="true"/>
     <feature name="video-allow-fullscreen" value="true"/>
     <feature name="video-show-titles" value="true"/>
@@ -110,9 +112,8 @@
     <feature name="wj-enabled" value="false"/>
     <feature name="show-red-letters" value="false"/>
     <feature name="show-glossary-words" value="true"/>
-    <feature name="show-footnotes" value="true"/>
-    <feature name="show-cross-refs" value="true"/>
     <feature name="show-illustrations" value="true"/>
+    <feature name="zoom-illustrations" value="true"/>
     <feature name="resize-illustrations" value="true"/>
     <feature name="resize-illustrations-width" value="480"/>
     <feature name="backgrounds-crop" value="true"/>
@@ -127,10 +128,7 @@
     <feature name="display-videos-in-bible-text" value="normal"/>
     <feature name="hide-empty-verses" value="true"/>
     <feature name="hide-empty-chapters" value="true"/>
-    <feature name="footnote-caller-type" value="default"/>
-    <feature name="footnote-caller-symbol" value=""/>
-    <feature name="crossref-caller-type" value="default"/>
-    <feature name="crossref-caller-symbol" value=""/>
+    <feature name="hide-verse-number-1" value="true"/>
     <feature name="verse-of-the-day" value="false"/>
     <feature name="verse-of-the-day-default" value="false"/>
     <feature name="verse-of-the-day-time" value="12:00"/>
@@ -143,9 +141,9 @@
     <feature name="daily-reminder-time" value="07:30"/>
     <feature name="text-on-image" value="true"/>
     <feature name="text-on-image-video" value="true"/>
-    <feature name="text-on-image-watermark-width" value="15"/>
+    <feature name="text-on-image-watermark-width" value="20"/>
     <feature name="text-on-image-watermark-margin" value="1"/>
-    <feature name="text-on-image-watermark-position" value="top-left"/>
+    <feature name="text-on-image-watermark-position" value="bottom-right"/>
     <feature name="layout-config-change-nav-drawer-menu" value="true"/>
     <feature name="layout-config-change-toolbar-button" value="true"/>
     <feature name="layout-config-change-viewer-button" value="true"/>
@@ -186,6 +184,7 @@
 
   <fonts>
     <font-handling>
+      <viewer type="default"/>
       <grandroid enabled="true" versions="16,17,18"/>
     </font-handling>
 
@@ -231,6 +230,7 @@
       <style-decl property="padding-right" value="0%"/>
       <style-decl property="padding-top" value="12px"/>
       <style-decl property="text-indent" value="0"/>
+      <style-decl property="text-align" value="right"/>
     </style>
     <style name="div.mi" category="text">
       <style-decl property="padding-left" value="8%"/>
@@ -286,6 +286,16 @@
       <feature name="ref-chapter-range-separator" value="-"/>
       <feature name="ref-chapter-list-separator" value=";"/>
       <feature name="ref-extra-material" value=""/>
+      <feature name="ref-parse-introductions" value="false"/>
+      <feature name="ref-parse-glossary" value="false"/>
+      <feature name="show-footnotes" value="true"/>
+      <feature name="footnote-caller-type" value="default"/>
+      <feature name="footnote-caller-symbol" value=""/>
+      <feature name="footnote-caller-no-caller-to-auto" value="true"/>
+      <feature name="show-cross-refs" value="true"/>
+      <feature name="crossref-caller-type" value="default"/>
+      <feature name="crossref-caller-symbol" value=""/>
+      <feature name="crossref-caller-no-caller-to-auto" value="true"/>
       <feature name="numerals-type" value="default"/>
       <feature name="bc-allow-single-pane" value="true"/>
       <feature name="bc-allow-copy-text" value="true"/>
@@ -296,6 +306,10 @@
       <feature name="bc-allow-verse-of-the-day" value="true"/>
       <feature name="bc-allow-share-audio" value="false"/>
       <feature name="bc-allow-share-video" value="false"/>
+      <feature name="study-bible-explanatory-text-box" value="false"/>
+      <feature name="study-bible-explanatory-text-collapsible" value="false"/>
+      <feature name="study-bible-sidebars-collapsible" value="true"/>
+      <feature name="study-bible-footnote-keyword-links" value="true"/>
     </features>
 
     <styles-info>
@@ -307,10 +321,10 @@
       <verse-number-style value="default"/>
 
       <styles>
-        <style name="div.footer">
-        </style>
       </styles>
     </styles-info>
+
+    <font-choice type="all" />
 
     <writing-system code="bo">
       <display-names>
@@ -321,6 +335,8 @@
     <book id="B001">
       <name>ལེའུ་དང་བོ།</name>
       <abbrev>ལེའུ་དང་བོ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-01.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-01.txt</source>
 
@@ -333,6 +349,8 @@
     <book id="B002">
       <name>ལེའུ་གཉིས་པ།</name>
       <abbrev>ལེའུ་གཉིས་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-02.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-02.txt</source>
 
@@ -345,6 +363,8 @@
     <book id="B003">
       <name>ལེའུ་གསུམ་པ།</name>
       <abbrev>ལེའུ་གསུམ་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-03.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-03.txt</source>
 
@@ -357,6 +377,8 @@
     <book id="B004">
       <name>ལེའུ་བཞི་བ།</name>
       <abbrev>ལེའུ་བཞི་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-04.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-04.txt</source>
 
@@ -369,6 +391,8 @@
     <book id="B005">
       <name>ལེའུ་ལྔ་བ།</name>
       <abbrev>ལེའུ་ལྔ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-05.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-05.txt</source>
 
@@ -381,6 +405,8 @@
     <book id="B006">
       <name>ལེའུ་དྲུག་པ།</name>
       <abbrev>ལེའུ་དྲུག་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-06.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-06.txt</source>
 
@@ -393,6 +419,8 @@
     <book id="B007">
       <name>ལེའུ་བདུན་པ།</name>
       <abbrev>ལེའུ་བདུན་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-07.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-07.txt</source>
 
@@ -405,6 +433,8 @@
     <book id="B008">
       <name>ལེའུ་བརྒྱད་པ།</name>
       <abbrev>ལེའུ་བརྒྱད་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-08.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-08.txt</source>
 
@@ -417,6 +447,8 @@
     <book id="B009">
       <name>ལེའུ་དགུ་བ།</name>
       <abbrev>ལེའུ་དགུ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-09.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-09.txt</source>
 
@@ -429,6 +461,8 @@
     <book id="B010">
       <name>ལེའུ་བཅུ་བ།</name>
       <abbrev>ལེའུ་བཅུ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>སྤྱོད་འཇུག་རྩ་བ།-chapter-10.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Root-Verse\སྤྱོད་འཇུག་རྩ་བ།-chapter-10.txt</source>
 
@@ -452,6 +486,16 @@
       <feature name="ref-chapter-range-separator" value="-"/>
       <feature name="ref-chapter-list-separator" value=";"/>
       <feature name="ref-extra-material" value=""/>
+      <feature name="ref-parse-introductions" value="false"/>
+      <feature name="ref-parse-glossary" value="false"/>
+      <feature name="show-footnotes" value="true"/>
+      <feature name="footnote-caller-type" value="default"/>
+      <feature name="footnote-caller-symbol" value=""/>
+      <feature name="footnote-caller-no-caller-to-auto" value="true"/>
+      <feature name="show-cross-refs" value="true"/>
+      <feature name="crossref-caller-type" value="default"/>
+      <feature name="crossref-caller-symbol" value=""/>
+      <feature name="crossref-caller-no-caller-to-auto" value="true"/>
       <feature name="numerals-type" value="default"/>
       <feature name="bc-allow-single-pane" value="true"/>
       <feature name="bc-allow-copy-text" value="true"/>
@@ -462,6 +506,10 @@
       <feature name="bc-allow-verse-of-the-day" value="true"/>
       <feature name="bc-allow-share-audio" value="false"/>
       <feature name="bc-allow-share-video" value="false"/>
+      <feature name="study-bible-explanatory-text-box" value="false"/>
+      <feature name="study-bible-explanatory-text-collapsible" value="false"/>
+      <feature name="study-bible-sidebars-collapsible" value="true"/>
+      <feature name="study-bible-footnote-keyword-links" value="true"/>
     </features>
 
     <styles-info>
@@ -473,10 +521,10 @@
       <verse-number-style value="default"/>
 
       <styles>
-        <style name="div.footer">
-        </style>
       </styles>
     </styles-info>
+
+    <font-choice type="all" />
 
     <writing-system code="bo">
       <display-names>
@@ -487,6 +535,8 @@
     <book id="B001">
       <name>ལེའུ་དང་བོ།</name>
       <abbrev>ལེའུ་དང་བོ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-01.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-01.txt</source>
 
@@ -499,6 +549,8 @@
     <book id="B002">
       <name>ལེའུ་གཉིས་པ།</name>
       <abbrev>ལེའུ་གཉིས་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-02.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-02.txt</source>
 
@@ -511,6 +563,8 @@
     <book id="B003">
       <name>ལེའུ་གསུམ་པ།</name>
       <abbrev>ལེའུ་གསུམ་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-03.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-03.txt</source>
 
@@ -523,6 +577,8 @@
     <book id="B004">
       <name>ལེའུ་བཞི་བ།</name>
       <abbrev>ལེའུ་བཞི་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-04.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-04.txt</source>
 
@@ -535,6 +591,8 @@
     <book id="B005">
       <name>ལེའུ་ལྔ་བ།</name>
       <abbrev>ལེའུ་ལྔ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-05.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-05.txt</source>
 
@@ -547,6 +605,8 @@
     <book id="B006">
       <name>ལེའུ་དྲུག་པ།</name>
       <abbrev>ལེའུ་དྲུག་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-06.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-06.txt</source>
 
@@ -559,6 +619,8 @@
     <book id="B007">
       <name>ལེའུ་བདུན་པ།</name>
       <abbrev>ལེའུ་བདུན་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-07.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-07.txt</source>
 
@@ -571,6 +633,8 @@
     <book id="B008">
       <name>ལེའུ་བརྒྱད་པ།</name>
       <abbrev>ལེའུ་བརྒྱད་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-08.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-08.txt</source>
 
@@ -583,6 +647,8 @@
     <book id="B009">
       <name>ལེའུ་དགུ་བ།</name>
       <abbrev>ལེའུ་དགུ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-09.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-09.txt</source>
 
@@ -595,6 +661,8 @@
     <book id="B010">
       <name>ལེའུ་བཅུ་བ།</name>
       <abbrev>ལེའུ་བཅུ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Thokme-chapter-10.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Thokmezangpo\Thokme-chapter-10.txt</source>
 
@@ -618,6 +686,16 @@
       <feature name="ref-chapter-range-separator" value="-"/>
       <feature name="ref-chapter-list-separator" value=";"/>
       <feature name="ref-extra-material" value=""/>
+      <feature name="ref-parse-introductions" value="false"/>
+      <feature name="ref-parse-glossary" value="false"/>
+      <feature name="show-footnotes" value="true"/>
+      <feature name="footnote-caller-type" value="default"/>
+      <feature name="footnote-caller-symbol" value=""/>
+      <feature name="footnote-caller-no-caller-to-auto" value="true"/>
+      <feature name="show-cross-refs" value="true"/>
+      <feature name="crossref-caller-type" value="default"/>
+      <feature name="crossref-caller-symbol" value=""/>
+      <feature name="crossref-caller-no-caller-to-auto" value="true"/>
       <feature name="numerals-type" value="default"/>
       <feature name="bc-allow-single-pane" value="true"/>
       <feature name="bc-allow-copy-text" value="true"/>
@@ -628,6 +706,10 @@
       <feature name="bc-allow-verse-of-the-day" value="true"/>
       <feature name="bc-allow-share-audio" value="false"/>
       <feature name="bc-allow-share-video" value="false"/>
+      <feature name="study-bible-explanatory-text-box" value="false"/>
+      <feature name="study-bible-explanatory-text-collapsible" value="false"/>
+      <feature name="study-bible-sidebars-collapsible" value="true"/>
+      <feature name="study-bible-footnote-keyword-links" value="true"/>
     </features>
 
     <styles-info>
@@ -639,10 +721,10 @@
       <verse-number-style value="default"/>
 
       <styles>
-        <style name="div.footer">
-        </style>
       </styles>
     </styles-info>
+
+    <font-choice type="all" />
 
     <writing-system code="bo">
       <display-names>
@@ -653,6 +735,8 @@
     <book id="B001">
       <name>ལེའུ་དང་བོ།</name>
       <abbrev>ལེའུ་དང་བོ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-01.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-01.txt</source>
 
@@ -665,6 +749,8 @@
     <book id="B002">
       <name>ལེའུ་གཉིས་པ།</name>
       <abbrev>ལེའུ་གཉིས་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-02.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-02.txt</source>
 
@@ -677,6 +763,8 @@
     <book id="B003">
       <name>ལེའུ་གསུམ་པ།</name>
       <abbrev>ལེའུ་གསུམ་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-03.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-03.txt</source>
 
@@ -689,6 +777,8 @@
     <book id="B004">
       <name>ལེའུ་བཞི་བ།</name>
       <abbrev>ལེའུ་བཞི་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-04.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-04.txt</source>
 
@@ -701,6 +791,8 @@
     <book id="B005">
       <name>ལེའུ་ལྔ་བ།</name>
       <abbrev>ལེའུ་ལྔ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-05.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-05.txt</source>
 
@@ -713,6 +805,8 @@
     <book id="B006">
       <name>ལེའུ་དྲུག་པ།</name>
       <abbrev>ལེའུ་དྲུག་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-06.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-06.txt</source>
 
@@ -725,6 +819,8 @@
     <book id="B007">
       <name>ལེའུ་བདུན་པ།</name>
       <abbrev>ལེའུ་བདུན་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-07.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-07.txt</source>
 
@@ -737,6 +833,8 @@
     <book id="B008">
       <name>ལེའུ་བརྒྱད་པ།</name>
       <abbrev>ལེའུ་བརྒྱད་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-08.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-08.txt</source>
 
@@ -749,6 +847,8 @@
     <book id="B009">
       <name>ལེའུ་དགུ་བ།</name>
       <abbrev>ལེའུ་དགུ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-09.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-09.txt</source>
 
@@ -761,6 +861,8 @@
     <book id="B010">
       <name>ལེའུ་བཅུ་བ།</name>
       <abbrev>ལེའུ་བཅུ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Kunpal-chapter-10.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\Kunpal\Kunpal-chapter-10.txt</source>
 
@@ -784,6 +886,16 @@
       <feature name="ref-chapter-range-separator" value="-"/>
       <feature name="ref-chapter-list-separator" value=";"/>
       <feature name="ref-extra-material" value=""/>
+      <feature name="ref-parse-introductions" value="false"/>
+      <feature name="ref-parse-glossary" value="false"/>
+      <feature name="show-footnotes" value="true"/>
+      <feature name="footnote-caller-type" value="default"/>
+      <feature name="footnote-caller-symbol" value=""/>
+      <feature name="footnote-caller-no-caller-to-auto" value="true"/>
+      <feature name="show-cross-refs" value="true"/>
+      <feature name="crossref-caller-type" value="default"/>
+      <feature name="crossref-caller-symbol" value=""/>
+      <feature name="crossref-caller-no-caller-to-auto" value="true"/>
       <feature name="numerals-type" value="default"/>
       <feature name="bc-allow-single-pane" value="true"/>
       <feature name="bc-allow-copy-text" value="true"/>
@@ -794,6 +906,10 @@
       <feature name="bc-allow-verse-of-the-day" value="true"/>
       <feature name="bc-allow-share-audio" value="false"/>
       <feature name="bc-allow-share-video" value="false"/>
+      <feature name="study-bible-explanatory-text-box" value="false"/>
+      <feature name="study-bible-explanatory-text-collapsible" value="false"/>
+      <feature name="study-bible-sidebars-collapsible" value="true"/>
+      <feature name="study-bible-footnote-keyword-links" value="true"/>
     </features>
 
     <styles-info>
@@ -805,10 +921,10 @@
       <verse-number-style value="default"/>
 
       <styles>
-        <style name="div.footer">
-        </style>
       </styles>
     </styles-info>
+
+    <font-choice type="all" />
 
     <writing-system code="bo">
       <display-names>
@@ -819,6 +935,8 @@
     <book id="B001">
       <name>ལེའུ་དང་བོ།</name>
       <abbrev>ལེའུ་དང་བོ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Chodak-chapter-01.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\ThubtenChodak\Chodak-chapter-01.txt</source>
 
@@ -831,6 +949,8 @@
     <book id="B002">
       <name>ལེའུ་གཉིས་པ།</name>
       <abbrev>ལེའུ་གཉིས་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Chodak-chapter-02.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\ThubtenChodak\Chodak-chapter-02.txt</source>
 
@@ -843,6 +963,8 @@
     <book id="B003">
       <name>ལེའུ་གསུམ་པ།</name>
       <abbrev>ལེའུ་གསུམ་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Chodak-chapter-03.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\ThubtenChodak\Chodak-chapter-03.txt</source>
 
@@ -855,6 +977,8 @@
     <book id="B004">
       <name>ལེའུ་བཞི་བ།</name>
       <abbrev>ལེའུ་བཞི་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Chodak-chapter-04.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\ThubtenChodak\Chodak-chapter-04.txt</source>
 
@@ -867,6 +991,8 @@
     <book id="B005">
       <name>ལེའུ་ལྔ་བ།</name>
       <abbrev>ལེའུ་ལྔ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Chodak-chapter-05.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\ThubtenChodak\Chodak-chapter-05.txt</source>
 
@@ -879,6 +1005,8 @@
     <book id="B006">
       <name>ལེའུ་དྲུག་པ།</name>
       <abbrev>ལེའུ་དྲུག་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Chodak-chapter-06.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\ThubtenChodak\Chodak-chapter-06.txt</source>
 
@@ -891,6 +1019,8 @@
     <book id="B007">
       <name>ལེའུ་བདུན་པ།</name>
       <abbrev>ལེའུ་བདུན་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Chodak-chapter-07.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\ThubtenChodak\Chodak-chapter-07.txt</source>
 
@@ -903,6 +1033,8 @@
     <book id="B008">
       <name>ལེའུ་བརྒྱད་པ།</name>
       <abbrev>ལེའུ་བརྒྱད་པ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Chodak-chapter-08.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\ThubtenChodak\Chodak-chapter-08.txt</source>
 
@@ -915,6 +1047,8 @@
     <book id="B009">
       <name>ལེའུ་དགུ་བ།</name>
       <abbrev>ལེའུ་དགུ་བ།</abbrev>
+
+      <font-choice type="book-collection" />
       <filename>Chodak-chapter-09.txt</filename>
       <source>D:\Scripture App Builder\Chojuk-chatsang\Chojuk-chapters\ThubtenChodak\Chodak-chapter-09.txt</source>
 
@@ -931,7 +1065,7 @@
     <feature name="epub-toc-section-headings" value="true"/>
   </features>
 
-  <contents-filename>DDDCKJBNII</contents-filename>
+  <contents-filename>B5LYbBE1eg</contents-filename>
 
   <layouts default="single">
     <layout mode="single" enabled="true">
@@ -1393,6 +1527,20 @@
   </interface-languages>
 
   <translation-mappings default-lang="bo">
+    <translation-mapping id="Menu_Bible">
+      <translation lang="en">Bible</translation>
+      <translation lang="fr">Bible</translation>
+      <translation lang="es">Biblia</translation>
+      <translation lang="pt">Bíblia</translation>
+      <translation lang="ru">Библия</translation>
+      <translation lang="de">Bibel</translation>
+      <translation lang="it">Bibbia</translation>
+      <translation lang="nl">Bijbel</translation>
+      <translation lang="hi">बाइबल</translation>
+      <translation lang="zh">圣经</translation>
+      <translation lang="id">Alkitab</translation>
+      <translation lang="ko">성경</translation>
+    </translation-mapping>
     <translation-mapping id="Menu_Contents">
       <translation lang="en">Contents</translation>
       <translation lang="fr">Contenu</translation>
@@ -1669,7 +1817,13 @@
       <translation lang="fr">Réinitialiser le contenu</translation>
       <translation lang="ru">Сбросить настройки содержания</translation>
       <translation lang="de">Inhalt zurücksetzen</translation>
+      <translation lang="ar">إعادة ضبط المحتويات</translation>
       <translation lang="bo">ནང་དོན་བསྐྱར་སྒྲིག</translation>
+    </translation-mapping>
+    <translation-mapping id="Menu_Plans">
+      <translation lang="en">Plans</translation>
+      <translation lang="fr">Plans</translation>
+      <translation lang="es">Planes</translation>
     </translation-mapping>
     <translation-mapping id="Menu_Item_Copy">
       <translation lang="en">Copy</translation>
@@ -2830,6 +2984,22 @@
       <translation lang="de">Audiodatei erstellen…</translation>
       <translation lang="bo">སྒྲའི་ཡིག་ཆ་བཟོ་བཞིན་ཡོད།</translation>
     </translation-mapping>
+    <translation-mapping id="Audio_Repeat_Off_Continue">
+      <translation lang="en">Play to next page</translation>
+      <translation lang="fr">Aller à la page suivante</translation>
+    </translation-mapping>
+    <translation-mapping id="Audio_Repeat_Off_Stop">
+      <translation lang="en">Stop at end of page</translation>
+      <translation lang="fr">Arrêter en fin de page</translation>
+    </translation-mapping>
+    <translation-mapping id="Audio_Repeat_Page">
+      <translation lang="en">Repeat page</translation>
+      <translation lang="fr">Répéter la page</translation>
+    </translation-mapping>
+    <translation-mapping id="Audio_Repeat_Selection">
+      <translation lang="en">Repeat selection</translation>
+      <translation lang="fr">Répéter la sélection</translation>
+    </translation-mapping>
     <translation-mapping id="Video_Download_Title">
       <translation lang="en">Video Download</translation>
       <translation lang="fr">Téléchargement vidéo</translation>
@@ -2927,11 +3097,19 @@
       <translation lang="de">Video erstellen…</translation>
       <translation lang="bo">བརྙན་བཟོ་བཞིན་ཡོད།</translation>
     </translation-mapping>
+    <translation-mapping id="Video_File_Not_Found">
+      <translation lang="en">Video file not found</translation>
+      <translation lang="fr">Fichier vidéo introuvable</translation>
+      <translation lang="es">Archivo de video no encontrado</translation>
+      <translation lang="pt">Arquivo de vídeo não encontrado</translation>
+      <translation lang="ru">Видеофайл не найден</translation>
+    </translation-mapping>
     <translation-mapping id="App_Downloading_App">
       <translation lang="en">Downloading App...</translation>
       <translation lang="fr">Téléchargement de l&apos;application...</translation>
       <translation lang="ru">Приложение загружается…</translation>
       <translation lang="de">App herunterladen…</translation>
+      <translation lang="ar">جاري تنزيل التطبيق</translation>
       <translation lang="bo">མཉེན་ཆས་ཕབ་ལེན་བྱེད་བཞིན་པ་་་</translation>
     </translation-mapping>
     <translation-mapping id="App_File_Error">
@@ -2939,6 +3117,7 @@
       <translation lang="fr">Erreur de traitement de l&apos;application téléchargée</translation>
       <translation lang="ru">При установке загруженного приложения произошла ошибка</translation>
       <translation lang="de">Fehler beim Verarbeiten der heruntergeladenen App</translation>
+      <translation lang="ar">خطأ في تشغيل التطبيق الذي تم تنزيله</translation>
       <translation lang="bo">མཉེན་ཆས་ཕབ་ལེན་ལ་གནད་དོན་བྱུང་སོང་།</translation>
     </translation-mapping>
     <translation-mapping id="Selector_Book">
@@ -3420,6 +3599,7 @@
       <translation lang="es">Imágenes en texto bíblico</translation>
       <translation lang="ru">Картинки в библейском тексте</translation>
       <translation lang="de">Bilder im Bibeltext</translation>
+      <translation lang="ar">صور في النص الكتابي</translation>
       <translation lang="bo">ཡེ་ཤུའི་གསུང་རབ་ནང་གི་འདྲ་པར་རྣམས།</translation>
     </translation-mapping>
     <translation-mapping id="Settings_Display_Videos_In_Bible_Text">
@@ -3428,6 +3608,7 @@
       <translation lang="es">Vídeos en texto bíblico</translation>
       <translation lang="ru">Видео в библейском тексте</translation>
       <translation lang="de">Videos im Bibeltext</translation>
+      <translation lang="ar">فيديوهات في النص الكتابي</translation>
       <translation lang="bo">ཡེ་ཤུའི་གསུང་རབ་ནང་གི་བརྙན་པར་རྣམས།</translation>
     </translation-mapping>
     <translation-mapping id="Settings_Display_Images_Normal">
@@ -3436,6 +3617,7 @@
       <translation lang="es">Mostrar imágenes</translation>
       <translation lang="ru">Показывать картинки</translation>
       <translation lang="de">Bilder zeigen</translation>
+      <translation lang="ar">عرض الصور</translation>
       <translation lang="bo">འདྲ་པར་རྣམས་སྟོན།</translation>
     </translation-mapping>
     <translation-mapping id="Settings_Display_Images_Hidden">
@@ -3444,6 +3626,7 @@
       <translation lang="es">Ocultar imágenes</translation>
       <translation lang="ru">Скрывать картинки</translation>
       <translation lang="de">Bilder ausblenden</translation>
+      <translation lang="ar">إخفاء الصور</translation>
       <translation lang="bo">འདྲ་པར་རྣམས་སྦེད།</translation>
     </translation-mapping>
     <translation-mapping id="Settings_Display_Videos_Normal">
@@ -3452,6 +3635,7 @@
       <translation lang="es">Mostrar tamaño normal</translation>
       <translation lang="ru">Смотреть полномасштабные видео</translation>
       <translation lang="de">Normale Größe zeigen</translation>
+      <translation lang="ar">عرض بالحجم العادي</translation>
       <translation lang="bo">རྒྱུན་ལྡན་གྱི་ཆེ་ཆུང་ལྟར་སྟོན།</translation>
     </translation-mapping>
     <translation-mapping id="Settings_Display_Videos_Small">
@@ -3459,6 +3643,7 @@
       <translation lang="fr">Montrer en petite taille</translation>
       <translation lang="ru">Смотреть видео уменьшенного размера</translation>
       <translation lang="de">Kleine Größe zeigen</translation>
+      <translation lang="ar">عرض بالحجم الصغير</translation>
       <translation lang="bo">ཆུང་བ་སྟོན།</translation>
     </translation-mapping>
     <translation-mapping id="Settings_Display_Videos_Hidden">
@@ -3467,6 +3652,7 @@
       <translation lang="es">Ocultar videos</translation>
       <translation lang="ru">Скрывать видео</translation>
       <translation lang="de">Videos ausblenden</translation>
+      <translation lang="ar">إخفاء الفيديوهات</translation>
       <translation lang="bo">བརྙན་རྣམས་སྦེད།</translation>
     </translation-mapping>
     <translation-mapping id="Settings_Show_Border">
@@ -4088,6 +4274,7 @@
       <translation lang="ta">பதியவும்</translation>
       <translation lang="ru">Зарегистрироваться</translation>
       <translation lang="de">Registrieren</translation>
+      <translation lang="ar">تسجيل حساب</translation>
       <translation lang="bo">ཐོ་གཞུང་གསར་བཟོ།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Sign_Out_Button">
@@ -4106,6 +4293,7 @@
       <translation lang="fr">Voulez-vous vous déconnecter ?\n\nLes nouveaux surlignements, notes et signets ne seront pas enregistrés sur votre compte.</translation>
       <translation lang="ru">Вы хотите завершить сессию?\n\n Внесённые изменения, заметки и закладки не сохранятся в вашем аккаунте.</translation>
       <translation lang="de">Möchten Sie sich abmelden?\n\nNeue Markierungen, Notizen und Lesezeichen werden nicht in Ihrem Konto gespeichert.</translation>
+      <translation lang="ar">هل ترغب في الخروج؟\n\nلن يتم حفظ أي نقاط رئيسية أو ملاحظات أو علامات مرجعية جديدة على حسابك</translation>
       <translation lang="bo">ཁྱེད་རང་ཕྱིར་ཐོན་བྱ་རྒྱུ་ཡིན་ནམ།\n\n ཁྱེད་ཀྱི་ཁ་བྱང་ནང་མཆན་བཏབ་པ་དང་འདེམས་རྟགས་བརྒྱབ་པ། དཔེ་རྟགས་གསར་བ་བཀོད་པའི་རིགས་གཅིག་ཀྱང་ཉར་ཚགས་མི་བྱེད།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Full_Name">
@@ -4168,6 +4356,7 @@
       <translation lang="fr">Réinitialiser mot de passe</translation>
       <translation lang="ru">Сбросить пароль</translation>
       <translation lang="de">Passwort zurücksetzen</translation>
+      <translation lang="ar">إعادة ضبط كلمة المرور</translation>
       <translation lang="bo">གསང་ཚིག་བསྐྱར་སྒྲིག</translation>
     </translation-mapping>
     <translation-mapping id="Account_Change_Password">
@@ -4219,6 +4408,7 @@
       <translation lang="fr">Modifier profil</translation>
       <translation lang="ru">Изменить профиль</translation>
       <translation lang="de">Profil ändern</translation>
+      <translation lang="ar">تغيير الملف الشخصي</translation>
       <translation lang="bo">གནས་ཚུལ་བསྐྱར་བཅོས།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Enter_Password">
@@ -4226,6 +4416,7 @@
       <translation lang="fr">Saisir mot de passe</translation>
       <translation lang="ru">Введите пароль</translation>
       <translation lang="de">Passwort eingeben</translation>
+      <translation lang="ar">إدخال كلمة المرور</translation>
       <translation lang="bo">གསང་ཚིག་ཞོག</translation>
     </translation-mapping>
     <translation-mapping id="Account_Save_Changes_Button">
@@ -4233,21 +4424,29 @@
       <translation lang="fr">Enregistrer</translation>
       <translation lang="ru">Сохранить изменения</translation>
       <translation lang="de">Änderungen speichern</translation>
+      <translation lang="ar">حفظ التغييرات</translation>
       <translation lang="bo">གསང་ཚིག་ཉོར།</translation>
     </translation-mapping>
-    <translation-mapping id="Account_Delete_Account">
+    <translation-mapping id="Account_Delete_Account_Button">
       <translation lang="en">Delete Account</translation>
       <translation lang="fr">Supprimer compte</translation>
       <translation lang="ru">Удалить аккаунт</translation>
       <translation lang="de">Konto löschen</translation>
-      <translation lang="bo">གསང་ཚིག་སུབ།</translation>
+      <translation lang="ar">حذف الحساب</translation>
     </translation-mapping>
-    <translation-mapping id="Account_Delete_Account_Confirmation">
-      <translation lang="en">Do you want to delete your account?\n\nAll your saved highlights, notes and bookmarks will be deleted.</translation>
-      <translation lang="fr">Voulez-vous supprimer votre compte ? Tous les surlignements, notes et signets que vous avez enregistrés seront supprimés.</translation>
-      <translation lang="ru">Вы хотите удалить свой аккаунт?\n\nВсе внесенные вами изменения, заметки и закладки будут удалены.</translation>
-      <translation lang="de">Möchten Sie Ihr Konto löschen?\n\nAlle Ihre gespeicherten Highlights, Notizen und Lesezeichen werden gelöscht.</translation>
-      <translation lang="bo">ཁྱེད་ཀྱི་ཁ་བྱང་བསུབ་རྒྱུ་ཡིན་ནམ།\n\nཁྱེད་ཀྱིས་ཉར་ཚགས་བྱས་པའི་འདེམ་རྟགས་བརྒྱབ་པ་དང་མཆན་བཏབ་པ། དཔེ་རྟགས་བཀོད་པ་ཚང་མ་བསུབ་འགྲོ།</translation>
+    <translation-mapping id="Account_Delete_Account_Title">
+      <translation lang="en">Delete Account</translation>
+      <translation lang="fr">Supprimer compte</translation>
+      <translation lang="ru">Удалить аккаунт</translation>
+      <translation lang="de">Konto löschen</translation>
+      <translation lang="ar">حذف الحساب</translation>
+    </translation-mapping>
+    <translation-mapping id="Account_Delete_Account_Info">
+      <translation lang="en">If you delete your account, all your saved highlights, notes and bookmarks will be deleted.\n\nPlease enter your password to confirm that you want to do this.</translation>
+      <translation lang="fr">Si vous supprimez votre compte, tous les surlignements, notes et signets que vous avez enregistrés seront supprimés.\n\nVeuillez saisir votre mot de passe pour confirmer que vous souhaitez le faire.</translation>
+      <translation lang="es">Si elimina su cuenta, se borrarán todos sus destacados, notas y marcadores guardados.\n\nIntroduzca su contraseña para confirmar que desea hacerlo.</translation>
+      <translation lang="ru">Если Вы удалите свою учетную запись, все сохраненные Вами основные моменты, заметки и закладки будут удалены.\n\nПожалуйста, введите свой пароль, чтобы подтвердить, что Вы хотите это сделать.</translation>
+      <translation lang="ar">إذا قمت بحذف حسابك ، فسيتم حذف جميع العلامات المميزة والملاحظات والإشارات المرجعية المحفوظة.\n\nالرجاء إدخال كلمة المرور الخاصة بك لتأكيد رغبتك في القيام بذلك.</translation>
     </translation-mapping>
     <translation-mapping id="Account_Login_Page_Heading">
       <translation lang="en">Sign In or Sign Up</translation>
@@ -4268,6 +4467,7 @@
       <translation lang="ta">நீங்கள் உங்கள் எடுத்து வைத்த குறிப்புகளையும் மேற்கோள்களையும் மற்றவர்களுடைய சாதனத்திற்கு அனுப்பலாம்</translation>
       <translation lang="ru">Вы можете сохранять выделение цветом, заметки, закладки и историю и синхронизировать это с другими устройствами.</translation>
       <translation lang="de">Sie können Ihre Markierungen, Notizen, Lesezeichen und den Verlauf speichern - und mit anderen Geräten synchronisieren</translation>
+      <translation lang="ar">يمكنك حفظ النقاط الهامة والملاحظات والإشارات المرجعية والتاريخ - ومزامنتها مع الأجهزة الأخرى</translation>
       <translation lang="bo">འདེམ་རྟགས་བཀོད་པ་དང་མཆན་བཏབ་པ་དཔེ་རྟགས་བཀོད་པ་བཅས་ཁྱེད་ཀྱིས་ཉར་ཚགས་བྱ་ཐུབ་ཅིང་། དེ་དག་འཕྲུལ་ཆས་གཞན་དང་མཐུད་ཀྱང་ཐུབ་པ་ཡིན།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Logged_In_Page_Info">
@@ -4278,6 +4478,7 @@
       <translation lang="ta">உங்களது சாதனம் இணையத் தொடர்பில் இருக்கும்போது உங்களது குறிப்புகளும் மேற்கோள்களும் வைத்து வைக்கப்படும்</translation>
       <translation lang="ru">Выделение цветом, заметки, закладки и история будут сохранены в вашем аккаунте при подключении к интернету.</translation>
       <translation lang="de">Ihre Markierungen, Notizen, Lesezeichen und der Verlauf werden in Ihrem Konto gespeichert, wenn Sie mit dem Internet verbunden sind.</translation>
+      <translation lang="ar">يتم حفظ النقاط الهامه والملاحظات والعلامات المرجعية والتاريخ على حسابك عندما تكون متصلاً بالأنترنت</translation>
       <translation lang="bo">ཁྱེད་དྲ་རྒྱ་ལ་མཐུད་དུས་ཁྱེད་ཀྱི་འདེམ་རྟགས་བཀོད་པ་དང་མཆན་བཏབ་པ་དཔེ་རྟགས་བརྒྱབ་པ་དང་བཅས་པ་ཁྱེད་ཀྱི་ཐོ་གཞུང་ནང་ཉར་འགྲོ།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Enter_Name">
@@ -4285,6 +4486,7 @@
       <translation lang="fr">Veuillez saisir votre nom.</translation>
       <translation lang="ru">Введите, пожалуйста, ваше имя.</translation>
       <translation lang="de">Bitte geben Sie Ihren Namen ein.</translation>
+      <translation lang="ar">برجاء إدخال اسمك</translation>
       <translation lang="bo">ཁྱེད་ཀྱི་མིང་འབྲི་རོགས།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Enter_Valid_Email">
@@ -4292,6 +4494,7 @@
       <translation lang="fr">Veuillez entrer une adresse e-mail valide.</translation>
       <translation lang="ru">Просьба ввести действительный электронный адрес.</translation>
       <translation lang="de">Bitte geben Sie eine gültige E-Mail-Adresse ein.</translation>
+      <translation lang="ar">برجاء إدخال بريد إلكتروني صحيح</translation>
       <translation lang="bo">ཁྱེད་ཀྱི་གློག་འཕྲིན་ཚུལ་མཐུན་ཞིག་འཇོག་རོགས།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Enter_Valid_Password">
@@ -4299,6 +4502,7 @@
       <translation lang="fr">Veuillez saisir un mot de passe valide. Les mots de passe doivent comporter au moins six caractères et peuvent contenir des lettres, des chiffres et des signes de ponctuation.</translation>
       <translation lang="ru">Просьба ввести действительный пароль. Пароль должен быть не короче шести знаков и может содержать буквы, цифры и знаки пунктуации.</translation>
       <translation lang="de">Bitte geben Sie ein gültiges Passwort ein. Passwörter müssen aus mindestens sechs Zeichen bestehen und können Buchstaben, Zahlen und Sonderzeichen enthalten.</translation>
+      <translation lang="ar">برجاء إدخال كلمة مرور صالحة.  كلمة المرور يجب أن تحتوي على 6 مكونات على الأقل ويمكن أن تتكون من حروف وأرقام وعلامات ترقيم</translation>
       <translation lang="bo">ཚུལ་མཐུན་གྱི་གསང་ཚིག་ཅིག་འཇོག་རོགས། གསང་ཚིག་ནང་གསལ་བྱེད་དང་ཨང་གྲངས་རྐྱེན་གྱི་ཡི་གེ་བཅས་འདུས་ཡོད་པའི་ཡིག་འབྲུ་ཉུང་མཐར་དྲུག་ངེས་པར་ཡོད་དགོས།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Enter_Email_And_Password">
@@ -4306,6 +4510,7 @@
       <translation lang="fr">Veuillez saisir votre adresse e-mail et votre mot de passe.</translation>
       <translation lang="ru">Просьба ввести электронный адрес и пароль.</translation>
       <translation lang="de">Bitte geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein.</translation>
+      <translation lang="ar">برجاء إدخال بريدك الالكتروني وكلمة المرور</translation>
       <translation lang="bo">ཁྱེད་ཀྱི་གློག་འཕྲིན་དང་གསང་ཚིག་འཇོག་རོགས།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Passwords_Not_Matching">
@@ -4313,6 +4518,7 @@
       <translation lang="fr">La confirmation de votre mot de passe ne correspond pas à votre nouveau mot de passe. Veuillez réessayer.</translation>
       <translation lang="ru">Подтверждённый пароль не совпадает с вашим новым паролем. Попробуйте ещё раз.</translation>
       <translation lang="de">Die Bestätigung Ihres Passworts stimmte nicht mit Ihrem neuen Passwort überein. Bitte versuchen Sie es erneut.</translation>
+      <translation lang="ar">التأكيد على كلمة المرور الخاصة بك لم يتوافق مع كلمة المرور الجديدة.  من فضلك حاول مرة أخرى</translation>
       <translation lang="bo">ཁྱེད་ཀྱི་གཏན་འཁེལ་གསང་ཚིག་དེ་ཁྱེད་ཀྱི་གསང་ཚིག་གསར་པ་དང་མཚུངས་མ་སོང་། བསྐྱར་དུ་ཚོད་ལྟ་བྱ་རོགས།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Incorrect_Email_Password">
@@ -4320,6 +4526,7 @@
       <translation lang="fr">Désolé, nous ne trouvons pas cette adresse e-mail et/ou ce mot de passe. Veuillez réessayer.</translation>
       <translation lang="ru">Введённый адрес электронной почты и/или пароль не найдены. Попробуйте ещё раз.</translation>
       <translation lang="de">Leider können wir diese E-Mail-Adresse und/oder dieses Passwort nicht finden. Bitte versuchen Sie es erneut.</translation>
+      <translation lang="ar">للأسف، لم نتمكن من الوصول إلى بريدك الالكتروني أو كلمة المرور.  من فضلك حاول مرة أخرى</translation>
       <translation lang="bo">དགོངས་དག ང་ཚོས་གློག་འཕྲིན་འདི་དང་/ཡང་ན་གསང་ཚིག་གང་རུང་ཞིག་རྙེད་མ་སོང་། བསྐྱར་དུ་ཚོད་ལྟ་བྱ་རོགས།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Sign_In_Error">
@@ -4327,6 +4534,7 @@
       <translation lang="fr">Désolé, nous n&apos;avons pas pu vous connecter.</translation>
       <translation lang="ru">К сожалению, попытка входа не удалась.</translation>
       <translation lang="de">Leider konnten wir Sie nicht anmelden.</translation>
+      <translation lang="ar">للأسف، لم نتمكن من إدخالك</translation>
       <translation lang="bo">དགོངས་དག ང་ཚོས་ཁྱེད་རང་ནང་འཇུག་བྱ་ཐུབ་མ་སོང་།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Sign_Up_Error">
@@ -4334,6 +4542,7 @@
       <translation lang="fr">Désolé, nous n&apos;avons pas pu vous inscrire.</translation>
       <translation lang="ru">К сожалению, регистрация не прошла.</translation>
       <translation lang="de">Leider konnten wir Sie nicht registrieren.</translation>
+      <translation lang="ar">للأسف، لم نتمكن من تسجيلك</translation>
       <translation lang="bo">དགོངས་དག ང་ཚོས་ཁྱེད་ཀྱི་ཐོ་གཞུང་གསར་བཟོ་བྱ་ཐུབ་མ་སོང་།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Database_Error">
@@ -4341,6 +4550,7 @@
       <translation lang="fr">Veuillez signaler l&apos;erreur suivante :</translation>
       <translation lang="ru">Пожалуйста, сообщите об ошибке базы данных:</translation>
       <translation lang="de">Bitte melden Sie den folgenden Datenbankfehler:</translation>
+      <translation lang="ar">برجاء الإبلاغ عن الخطأ التالي في قاعدة البيانات:</translation>
       <translation lang="bo">གཤམ་གསལ་གྱི་གཞི་གྲངས་མཛོད་ཀྱི་གནད་དོན་ཡར་ཞུ་བྱ་རོགས།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Change_Password_Error">
@@ -4348,6 +4558,7 @@
       <translation lang="fr">Désolé, nous n&apos;avons pas pu modifier votre mot de passe.</translation>
       <translation lang="ru">К сожалению, попытка изменить пароль не удалась.</translation>
       <translation lang="de">Leider konnten wir Ihr Passwort nicht ändern.</translation>
+      <translation lang="ar">للأسف لم نتمكن من تغيير كلمة المرور</translation>
       <translation lang="bo">དགོངས་དག ང་ཚོས་ཁྱེད་ཀྱི་གསང་ཚིག་བརྗེ་ཐུབ་མ་སོང་།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Change_Profile_Error">
@@ -4355,6 +4566,7 @@
       <translation lang="fr">Désolé, nous n&apos;avons pas pu modifier votre profil.</translation>
       <translation lang="ru">К сожалению, попытка изменения профиля не удалась.</translation>
       <translation lang="de">Leider konnten wir Ihr Profil nicht ändern.</translation>
+      <translation lang="ar">للأسف، لم نتمكن من تغيير حسابك</translation>
       <translation lang="bo">དགོངས་དག ང་ཚོས་ཁྱེད་ཀྱི་གནས་ཚུལ་བསྒྱུར་བཅོས་བྱ་ཐུབ་མ་སོང་།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Check_Internet">
@@ -4362,6 +4574,7 @@
       <translation lang="fr">Veuillez vérifier votre connexion Internet.</translation>
       <translation lang="ru">Проверьте, пожалуйста, ваше соединение с интернетом.</translation>
       <translation lang="de">Bitte überprüfen Sie Ihre Internetverbindung.</translation>
+      <translation lang="ar">برجاء فحص التوصيل بالإنترنت</translation>
       <translation lang="bo">ཁྱེད་རང་སྐུད་མེད་དྲ་ལ་མཐུད་ཡོད་མེད་བལྟ་རོགས།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Reset_Password_Email_Sent">
@@ -4369,6 +4582,7 @@
       <translation lang="fr">Nous vous avons envoyé un courriel pour réinitialiser votre mot de passe.</translation>
       <translation lang="ru">Мы отправили вам email для изменения вашего пароля.</translation>
       <translation lang="de">Wir haben Ihnen eine E-Mail geschickt, um Ihr Passwort zurückzusetzen.</translation>
+      <translation lang="ar">لقد أرسلنا لك إيميل لتغيير كلمة المرور الخاصة بك</translation>
       <translation lang="bo">ང་ཚོས་ཁྱེད་ལ་གསང་ཚིག་བསྐྱར་སྒྲིག་བྱ་སའི་གློག་འཕྲིན་ཞིག་བཏང་ཡོད།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Email_Already_In_Use">
@@ -4376,12 +4590,15 @@
       <translation lang="fr">Cette adresse e-mail est déjà utilisée.</translation>
       <translation lang="ru">Этот email уже используется.</translation>
       <translation lang="de">Diese E-Mail-Adresse ist bereits in Gebrauch.</translation>
+      <translation lang="ar">هذا الحساب الالكتروني مستخدم بالفعل</translation>
       <translation lang="bo">གློག་འཕྲིན་འདི་ད་སྔ་ནས་འདིའི་ནང་བཀོལ་སྤྱོད་བྱས་འདུག</translation>
     </translation-mapping>
     <translation-mapping id="Account_Message_Delete_Account_Error">
       <translation lang="en">Sorry, we were unable to delete your account.</translation>
       <translation lang="fr">Désolé, nous n&apos;avons pas pu supprimer votre compte.</translation>
+      <translation lang="es">Lo sentimos, no hemos podido eliminar su cuenta.\n\nPor favor, compruebe que ha introducido correctamente su contraseña y que dispone de conexión a Internet.</translation>
       <translation lang="ru">К сожалению, удалить ваш аккаунт не удаётся.</translation>
+      <translation lang="ar">للأسف، لم نتمكن من مسح حسابك</translation>
       <translation lang="de">Es tut uns leid, wir konnten Ihr Konto nicht löschen.</translation>
       <translation lang="bo">དགོངས་དག ང་ཚོས་ཁྱེད་ཀྱི་ཐོ་གཞུང་བསུབ་ཐུབ་མ་སོང་།</translation>
     </translation-mapping>
@@ -4390,7 +4607,11 @@
       <translation lang="fr">Votre compte a été supprimé avec succès.</translation>
       <translation lang="ru">Ваш аккаунт успешно удалён.</translation>
       <translation lang="de">Ihr Konto wurde erfolgreich gelöscht.</translation>
+      <translation lang="ar">تم مسح حسابك بنجاح</translation>
       <translation lang="bo">ཁྱེད་ཀྱི་ཐོ་གཞུང་བདེ་ལེགས་ངང་བསུབས་ཡོད།</translation>
+    </translation-mapping>
+    <translation-mapping id="Account_Message_Delete_Account_Need_Password">
+      <translation lang="en">Please enter your password to delete this account.</translation>
     </translation-mapping>
     <translation-mapping id="Notification_Verse_Of_The_Day_Title">
       <translation lang="en">Verse of the Day</translation>
@@ -4433,7 +4654,11 @@
       <translation lang="ta">தகவல்கள்</translation>
       <translation lang="ru">Сообщения</translation>
       <translation lang="de">Nachrichten</translation>
+      <translation lang="ar">رسائل</translation>
       <translation lang="bo">འཕྲིན་ཐུང་།</translation>
+    </translation-mapping>
+    <translation-mapping id="Notification_Channel_Name_Media_Player">
+      <translation lang="en">Media Player</translation>
     </translation-mapping>
     <translation-mapping id="Notification_Channel_Name_Verse_Of_The_Day">
       <translation lang="en">Verse of the Day</translation>
@@ -4444,6 +4669,7 @@
       <translation lang="ta">இன்றைய வசனம்</translation>
       <translation lang="ru">Стих дня</translation>
       <translation lang="de">Vers des Tages</translation>
+      <translation lang="ar">آية اليوم</translation>
       <translation lang="bo">ཉིན་དེའི་ཤོ་ལོ་ཀ</translation>
     </translation-mapping>
     <translation-mapping id="Notification_Channel_Name_Daily_Reminder">
@@ -4455,6 +4681,7 @@
       <translation lang="ta">இன்றைய வேத வாசிப்பு</translation>
       <translation lang="ru">Ежедневное напоминание</translation>
       <translation lang="de">Tägliche Erinnerung</translation>
+      <translation lang="ar">تذكير يومي</translation>
       <translation lang="bo">ཉིན་རེའི་དྲན་གསོ།</translation>
     </translation-mapping>
     <translation-mapping id="Notification_Channel_Name_Images">
@@ -4467,6 +4694,7 @@
       <translation lang="ta">படங்கள்</translation>
       <translation lang="ru">Изображения</translation>
       <translation lang="de">Bilder</translation>
+      <translation lang="ar">صور</translation>
       <translation lang="bo">འདྲ་པར་ཁག</translation>
     </translation-mapping>
     <translation-mapping id="Notification_Please_Allow">
@@ -4688,6 +4916,7 @@
       <translation lang="fr">Langue et agencement</translation>
       <translation lang="ru">Выберите язык и разметку</translation>
       <translation lang="de">Sprache und Layout auswählen</translation>
+      <translation lang="ar">اختيار اللغة والترتيبة</translation>
       <translation lang="bo">སྐད་ཡིག་འདམས་ཏེ་མཉམ་འཇུག་བྱོས།</translation>
     </translation-mapping>
     <translation-mapping id="Layout_Single_Pane">
@@ -4843,16 +5072,90 @@
       <translation lang="de">Sonstiges (\\\)</translation>
       <translation lang="bo">གཞན། (\\)</translation>
     </translation-mapping>
+    <translation-mapping id="Plans_Button_Start_Plan">
+      <translation lang="en">Start Plan</translation>
+      <translation lang="fr">Commencer</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Button_Start_Again">
+      <translation lang="en">Start Again</translation>
+      <translation lang="fr">Recommencer</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Button_Continue_Reading">
+      <translation lang="en">Continue</translation>
+      <translation lang="fr">Continuer</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Button_Next_Reading">
+      <translation lang="en">Next</translation>
+      <translation lang="fr">Suivant</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Button_View_Plan">
+      <translation lang="en">View Plan</translation>
+      <translation lang="fr">Voir plan</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Button_View_Plans">
+      <translation lang="en">View Plans</translation>
+      <translation lang="fr">Voir plans</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Tab_My_Plans">
+      <translation lang="en">My Plans</translation>
+      <translation lang="fr">Mes plans</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Tab_Choose_Plan">
+      <translation lang="en">Choose Plan</translation>
+      <translation lang="fr">Choisir plan</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Tab_Completed_Plans">
+      <translation lang="en">Completed</translation>
+      <translation lang="fr">Terminés</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Day">
+      <translation lang="en">Day</translation>
+      <translation lang="fr">Jour</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Number_Days">
+      <translation lang="en">%d days</translation>
+      <translation lang="fr">%d jours</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Date_Started">
+      <translation lang="en">You started this plan on %s.</translation>
+      <translation lang="fr">Vous avez commencé ce plan le %s.</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Date_Completed">
+      <translation lang="en">You completed this plan on %s.</translation>
+      <translation lang="fr">Vous avez terminé ce plan le %s.</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Progress_Item_Reading">
+      <translation lang="en">You are reading</translation>
+      <translation lang="fr">Vous êtes en train de lire</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Progress_Item_Completed">
+      <translation lang="en">You have completed</translation>
+      <translation lang="fr">Vous avez lu</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Progress_Congratulations">
+      <translation lang="en">Congratulations!</translation>
+      <translation lang="fr">Félicitations !</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Progress_Plan_Completed">
+      <translation lang="en">You have completed the plan</translation>
+      <translation lang="fr">Vous avez terminé le plan</translation>
+    </translation-mapping>
+    <translation-mapping id="Plans_Progress_Next_Reading">
+      <translation lang="en">The next reading is</translation>
+      <translation lang="fr">La lecture suivante est</translation>
+    </translation-mapping>
     <translation-mapping id="Quiz_Score_Page_Message_Before">
       <translation lang="en">You scored</translation>
       <translation lang="fr">Vous avez obtenu un score de</translation>
       <translation lang="de">Sie haben</translation>
+      <translation lang="ar">لقد سجلت</translation>
       <translation lang="bo">ཁྱེད་ཀྱིས་ཐོབ་སྐར་བླངས་སོང་།</translation>
     </translation-mapping>
     <translation-mapping id="Quiz_Score_Page_Message_After">
       <translation lang="en">out of %n% questions</translation>
       <translation lang="fr">sur %n% questions</translation>
       <translation lang="de">von %n% der Fragen</translation>
+      <translation lang="ar">من أصل %n% أسئلة</translation>
       <translation lang="bo">དྲི་བའི་ %n% ལས་ཐོན་སོང་།</translation>
     </translation-mapping>
     <translation-mapping id="Text_Copied">
@@ -4959,6 +5262,7 @@
       <translation lang="fr">Veuillez remplir les champs suivants pour continuer :</translation>
       <translation lang="ru">Чтобы продолжить, заполните следующие поля:</translation>
       <translation lang="de">Bitte füllen Sie die folgenden Felder aus, um fortzufahren:</translation>
+      <translation lang="ar">برجاء استكمال الفراغات التالية للإستمرار</translation>
       <translation lang="bo">རྒྱུན་མཐུད་པར་གཤམ་བཀོད་ཀྱི་ལས་ཚན་རྣམས་ཆ་ཚང་བསྒྲུབ་རོགས།</translation>
     </translation-mapping>
     <translation-mapping id="User_Check_Internet">
@@ -4966,6 +5270,7 @@
       <translation lang="fr">Veuillez vérifier que vous disposez d&apos;une connexion Internet, puis appuyez à nouveau sur le bouton pour continuer.</translation>
       <translation lang="ru">Проверьте ваше соединение с интернетом и нажмите ещё раз, чтобы продолжить.</translation>
       <translation lang="de">Bitte überprüfen Sie, ob Sie eine Internetverbindung haben, und drücken Sie dann erneut auf die Schaltfläche, um fortzufahren.</translation>
+      <translation lang="ar">برجاء التأكد من إتصالك بالأنترنت، ثم أضغط هذا الزر مرة أخرى للإستمرار</translation>
       <translation lang="bo">ཁྱེད་རང་དྲ་རྒྱར་མཐུད་ཡོད་མེད་བལྟ་རོགས། དེ་ནས་གནོན་ཐེབས་ལ་བསྣུན་ཏེ་མུ་མཐུད།</translation>
     </translation-mapping>
     <translation-mapping id="User_Database_Sign_In_Error">
@@ -4973,6 +5278,7 @@
       <translation lang="fr">Désolé, nous n&apos;avons pas pu nous connecter au serveur de la base de données.</translation>
       <translation lang="ru">К сожалению, войти на сервер базы данных не удалось.</translation>
       <translation lang="de">Es tut uns leid, wir konnten uns nicht am Datenbankserver anmelden.</translation>
+      <translation lang="ar">للأسف، لم نتمكن من التسجيل في سيرفر قاعدة البيانات</translation>
       <translation lang="bo">དགོངས་དག ང་ཚོས་གཞི་གྲངས་བརྟེན་གནས་ཀྱི་གསོག་མཛོད་ནང་ནང་འཛུལ་བྱ་ཐུབ་མ་སོང་།</translation>
     </translation-mapping>
     <translation-mapping id="User_Database_Add_User_Error">
@@ -4980,6 +5286,7 @@
       <translation lang="fr">Désolé, nous n&apos;avons pas pu ajouter cette information à la base de données en ligne.</translation>
       <translation lang="ru">К сожалению, добавить информацию к базе данных онлайн не удалось.</translation>
       <translation lang="de">Es tut uns leid, wir konnten diese Information nicht in die Online-Datenbank aufnehmen.</translation>
+      <translation lang="ar">للأسف، لا يمكننا إضافة هذه المعلومة في قاعدة البيانات</translation>
       <translation lang="bo">དགོངས་དག ང་ཚོས་གནས་ཚུལ་འདི་དྲ་ཐོག་གཞི་གྲངས་རྟེན་གནས་ནང་བསྣུན་ཐུབ་མ་སོང་།</translation>
     </translation-mapping>
     <translation-mapping id="Language_en">
@@ -5445,6 +5752,22 @@
       <translation lang="es">para que podamos guardar las imágenes que crea</translation>
       <translation lang="ar">يمكننا حفظ الصورة التي أنشأتها</translation>
       <translation lang="bo">དེར་བརྟེན་ང་ཚོས་ཁྱེད་ཀྱིས་བཟོས་པའི་འདྲ་པར་ཉར་ཆོག</translation>
+    </translation-mapping>
+    <translation-mapping id="Account_Delete_Account">
+      <translation lang="en">Delete Account</translation>
+      <translation lang="fr">Supprimer compte</translation>
+      <translation lang="ru">Удалить аккаунт</translation>
+      <translation lang="de">Konto löschen</translation>
+      <translation lang="ar">حذف الحساب</translation>
+      <translation lang="bo">གསང་ཚིག་སུབ།</translation>
+    </translation-mapping>
+    <translation-mapping id="Account_Delete_Account_Confirmation">
+      <translation lang="en">Do you want to delete your account?\n\nAll your saved highlights, notes and bookmarks will be deleted.</translation>
+      <translation lang="fr">Voulez-vous supprimer votre compte ? Tous les surlignements, notes et signets que vous avez enregistrés seront supprimés.</translation>
+      <translation lang="ru">Вы хотите удалить свой аккаунт?\n\nВсе внесенные вами изменения, заметки и закладки будут удалены.</translation>
+      <translation lang="de">Möchten Sie Ihr Konto löschen?\n\nAlle Ihre gespeicherten Highlights, Notizen und Lesezeichen werden gelöscht.</translation>
+      <translation lang="ar">هل ترغب في حذف حسابك؟ \n\nسوف يتم حذف كل النقاط الهامة والملاحظات والاشارات المرجعية التي قمت بحفظها</translation>
+      <translation lang="bo">ཁྱེད་ཀྱི་ཁ་བྱང་བསུབ་རྒྱུ་ཡིན་ནམ།\n\nཁྱེད་ཀྱིས་ཉར་ཚགས་བྱས་པའི་འདེམ་རྟགས་བརྒྱབ་པ་དང་མཆན་བཏབ་པ། དཔེ་རྟགས་བཀོད་པ་ཚང་མ་བསུབ་འགྲོ།</translation>
     </translation-mapping>
     <translation-mapping id="Language_bo">
       <translation lang="en">Tibetan</translation>

@@ -8,7 +8,7 @@
     <feature name="show-text-size-button" value="true"/>
     <feature name="launch-action" value="previous"/>
     <feature name="navigation-type" value="menu"/>
-    <feature name="title-type" value="app-name"/>
+    <feature name="title-type" value="screen"/>
   </features>
 
   <contents-items>
@@ -61,6 +61,12 @@
         <item id="2" />
         <item id="3" />
         <item id="4" />
+      </items>
+    </contents-screen>
+
+    <contents-screen id="2">
+      <title lang="default">སྤྱོད་འཇུག་རྩ་འགྲེལ།</title>
+      <items>
       </items>
     </contents-screen>
   </contents-screens>
