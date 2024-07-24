@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<app-definition type="SAB" program-version="11.0.3">
+<app-definition type="SAB" program-version="11.0.4">
   <project-name>སྤྱོད་འཇུག་རྩ་འགྲེལ།</project-name>
   <project-description></project-description>
 
@@ -4708,16 +4708,31 @@
       <translation lang="de">Bitte erlauben Sie dieser App, Ihnen Benachrichtigungen zu senden.</translation>
       <translation lang="bo">ཁྱེད་ལ་མཉེན་ཆས་འདིའི་གསལ་བརྡ་གཏོང་འཇུག་རོགས།</translation>
     </translation-mapping>
-    <translation-mapping id="Notification_Please_Allow_Info">
-      <translation lang="en">You can get a verse of the day and daily reminders.</translation>
-      <translation lang="fr">Vous pouvez recevoir un verset du jour et des rappels quotidiens.</translation>
-      <translation lang="ru">Вы можете получать цитату дня и ежедневные оповещения</translation>
-      <translation lang="id">Anda bisa mendapatkan nats harian dan peringatan harian.</translation>
-      <translation lang="ar">يمكنك أن تتلقى آية وتذكيرًا يوميًا</translation>
-      <translation lang="nl">Je kunt een vers van de dag en dagelijkse herinneringen ontvangen.</translation>
-      <translation lang="ta">இன்றைய வசனம் மற்றும் தினசரி நினைவூட்டல்களையும் நீங்கள் பெறலாம்</translation>
-      <translation lang="de">Sie können einen Vers des Tages und tägliche Erinnerungen erhalten.</translation>
-      <translation lang="bo">ཁྱེད་ལ་ཉིན་རེའི་ཤོ་ལོ་ཀ་དང་ཉིན་རེའི་དྲན་གསོ་འབྱོར་ཡོང་།</translation>
+    <translation-mapping id="Notification_Reason_1">
+      <translation lang="en">You can receive %s.</translation>
+      <translation lang="fr">Vous pouvez recevoir %s.</translation>
+    </translation-mapping>
+    <translation-mapping id="Notification_Reason_2">
+      <translation lang="en">You can receive %s and %s.</translation>
+      <translation lang="fr">Vous pouvez recevoir %s and %s.</translation>
+    </translation-mapping>
+    <translation-mapping id="Notification_Reason_3">
+      <translation lang="en">You can receive %s, %s and %s.</translation>
+      <translation lang="fr">Vous pouvez recevoir %s, %s et %s.</translation>
+    </translation-mapping>
+    <translation-mapping id="Notification_Reason_Verse_Of_The_Day">
+      <translation lang="en">a verse of the day</translation>
+      <translation lang="fr">un verset du jour</translation>
+      <translation lang="es">un versículo del día</translation>
+    </translation-mapping>
+    <translation-mapping id="Notification_Reason_Daily_Reminders">
+      <translation lang="en">daily reminders</translation>
+      <translation lang="fr">des rappels quotidiens</translation>
+      <translation lang="es">recordatorios diarios</translation>
+    </translation-mapping>
+    <translation-mapping id="Notification_Reason_Push_Notifications">
+      <translation lang="en">messages from the app developers</translation>
+      <translation lang="fr">messages des développeurs de l&apos;application</translation>
     </translation-mapping>
     <translation-mapping id="Song_List_By_Number">
       <translation lang="en">BY NUMBER</translation>
@@ -5752,6 +5767,17 @@
       <translation lang="es">para que podamos guardar las imágenes que crea</translation>
       <translation lang="ar">يمكننا حفظ الصورة التي أنشأتها</translation>
       <translation lang="bo">དེར་བརྟེན་ང་ཚོས་ཁྱེད་ཀྱིས་བཟོས་པའི་འདྲ་པར་ཉར་ཆོག</translation>
+    </translation-mapping>
+    <translation-mapping id="Notification_Please_Allow_Info">
+      <translation lang="en">You can get a verse of the day and daily reminders.</translation>
+      <translation lang="fr">Vous pouvez recevoir un verset du jour et des rappels quotidiens.</translation>
+      <translation lang="ru">Вы можете получать цитату дня и ежедневные оповещения</translation>
+      <translation lang="id">Anda bisa mendapatkan nats harian dan peringatan harian.</translation>
+      <translation lang="ar">يمكنك أن تتلقى آية وتذكيرًا يوميًا</translation>
+      <translation lang="nl">Je kunt een vers van de dag en dagelijkse herinneringen ontvangen.</translation>
+      <translation lang="ta">இன்றைய வசனம் மற்றும் தினசரி நினைவூட்டல்களையும் நீங்கள் பெறலாம்</translation>
+      <translation lang="de">Sie können einen Vers des Tages und tägliche Erinnerungen erhalten.</translation>
+      <translation lang="bo">ཁྱེད་ལ་ཉིན་རེའི་ཤོ་ལོ་ཀ་དང་ཉིན་རེའི་དྲན་གསོ་འབྱོར་ཡོང་།</translation>
     </translation-mapping>
     <translation-mapping id="Account_Delete_Account">
       <translation lang="en">Delete Account</translation>
